@@ -10,4 +10,4 @@ $ yarn
 $ yarn start
 ```
 
-![GIF](./public/GIF.gif)
+![GIF](./public/images/GIF.gif)
