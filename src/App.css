@@ -1,38 +1,242 @@
-.App {
-  text-align: center;
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #d1d0d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-box {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 2px 20px rgba(99, 99, 99, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 24px;
+}
+
+.container-inner {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* -------------------- PROGRESS -------------------- */
+
+.progress-section {
+  border-radius: 20px;
+  width: 100%;
+  padding: 16px;
+  background-color: #E07C7C;
+}
+
+.percent-section {
+  width: 100%;
+  height: 7.32px;
+  background-color: #3B3B3B;
+  border-radius: 999px;
+  margin-top: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* -------------------- DROPDOWN -------------------- */
+
+.container-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.dropdown-section {
+  width: 110px;
+  height: 29px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  background-color: white;
+  z-index: 50;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+  width: 100%;
+  height: 28px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+/* -------------------- TASK -------------------- */
+
+.task-section {
+  max-height: 26.5rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.task {
+  border-radius: 9999px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 1px rgba(99, 99, 99, 0.2);
+  width: '100%';
+  height: 46px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.add-task {
+  border-radius: 9999px;
+  background-color: white;
+  width: '100%';
+  height: 46px;
+  box-shadow: 0px 0px 1px rgba(99, 99, 99, 0.2);
+  margin-top: 10px;
+}
+
+.add-task input {
+  border-width: 0;
+  border-radius: 9999px;
+  background-color: white;
+  width: 100%;
+  height: 46px;
+  padding: 16px;
+  outline: 0;
+}
+
+.container-setting {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 111px;
+  height: fit-content;
+  background-color: white;
+  z-index: 90;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.setting {
+  width: 100%;
+  height: 28px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.setting:hover {
+  background-color: #EBB9B8;
   color: white;
+  transition-duration: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.edit-task {
+  border-radius: 9999px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 1px rgba(99, 99, 99, 0.2);
+  width: '100%';
+  height: 46px;
+  padding: 16px;
+  margin-bottom: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
+.edit-task input {
+  border-width: 0;
+  border-radius: 9999px;
+  background-color: white;
+  width: 100%;
+  height: 46px;
+  outline: 0;
+}
+
+.submit-button {
+  width: 64px;
+  height: 36px;
+  background-color: #585292;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: lighter;
+  transform: translateX(0.7rem);
+}
+
+.submit-button:hover {
+  transition-duration: 0.1s;
+  font-weight: bold;
+}
+
+/* -------------------- LOADING -------------------- */
+.container-loading {
+  border: 10px solid #edecec;
+  border-radius: 50%;
+  border-top: 10px solid #E07C7C;
+  animation: spin 1.3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+@media screen and (min-width: 768px) {
+  .container-box {
+    max-width: 720px;
+    max-height: 620px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .container-inner {
+    width: 518px;
+  }
+
+  .task-section {
+    max-height: 17rem;
+    overflow: hidden;
+    overflow-y: scroll;
   }
 }
