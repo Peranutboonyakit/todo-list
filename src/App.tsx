@@ -24,15 +24,11 @@ const App = () => {
   const context = useContext(todoListContext);
 
   // ---------------
-  //    HANDLE
-  // ---------------
-
-  // ---------------
   //    EFFECT
   // ---------------
   useEffect(() => {
     context.getTodoList();
-  }, []);
+  }, [context]);
   // ---------------
   //    RENDER
   // ---------------

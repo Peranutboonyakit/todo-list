@@ -88,7 +88,12 @@ const Task = (props: TaskProps) => {
                     await context.putCheckedTask(props.value);
                   }}
                 >
-                  <img src="/images/check.png" width={10} height={8} />
+                  <img
+                    src="/images/check.png"
+                    alt="check"
+                    width={10}
+                    height={8}
+                  />
                 </div>
                 <div
                   style={{
@@ -114,6 +119,7 @@ const Task = (props: TaskProps) => {
               >
                 <img
                   src="/images/dots.png"
+                  alt="dots"
                   style={{
                     width: "19px",
                     height: "5px",

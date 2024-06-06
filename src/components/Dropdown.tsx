@@ -28,6 +28,7 @@ const Dropdown = (props: DropdownProps) => {
           </p>
           <img
             src="/images/arrow-down.png"
+            alt="arrow-down"
             style={{
               width: "10px",
               height: "7px",
